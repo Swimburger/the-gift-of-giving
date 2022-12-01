@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+​
+@layer base {
+    html {
+        @apply h-full;
+    }
+​
+    body {
+        @apply mb-4 sm:mb-6 lg:mb-20 xl:mb-28 text-slate-700 bg-gradient-to-b from-neutral-100 to-white antialiased text-base h-full flex flex-col;
+    }
+​
+    h1, h2, h3, h4, h5, h6 {
+        @apply mb-3 mt-4 lg:mt-8 text-left text-violet-900;
+    }
+​
+    a {
+        @apply decoration-4 decoration-violet-200 underline hover:decoration-violet-800 transition duration-300 ease-in-out;
+    }
+​
+    h1 {
+        @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white m-0 font-bold;
+    }
+​
+    h2 {
+        @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl pb-1 mt-0 mb-4 font-bold;
+    }
+​
+    h3 {
+        @apply text-lg md:text-2xl lg:text-3xl m-0 font-bold;
+    }
+​
+    h4 {
+        @apply text-lg md:text-xl mt-6 font-bold;
+    }
+​
+    header {
+        @apply bg-violet-900 py-8 drop-shadow-lg px-4 lg:px-8 sm:px-0;
+    }
+​
+    main {
+        @apply main-content;
+    }
+​
+    .content {
+        flex: 1 0 auto;
+    }
+​
+    footer {
+        @apply bottom-0 mt-6 w-full;
+        flex-shrink: 0;
+    }
+​
+    footer a {
+        @apply text-slate-400 decoration-0;
+    }
+​
+    select {
+        @apply border-slate-300 bg-white border-2 p-2 rounded-md hover:border-slate-400 hover:bg-slate-100 hover:shadow-inner transition duration-300 ease-in-out text-xl mt-0;
+    }
+​
+    hr {
+        @apply my-6 border-zinc-300;
+    }
+​
+    label {
+        @apply block w-full text-center p-4 rounded-md border-2 border-slate-300 hover:cursor-pointer hover:bg-purple-50 ease-in-out duration-300 p-4 rounded-md border-2 border-slate-300 hover:cursor-pointer hover:bg-purple-900 hover:text-white ease-in-out duration-300 w-full h-full text-xl font-semibold cursor-pointer peer-checked:border-purple-800 peer-checked:bg-purple-800 peer-checked:text-white;
+    }
+​
+    fieldset {
+        @apply mt-10;
+    }
+​
+    legend {
+        @apply text-xl md:text-xl lg:text-2xl xl:text-3xl font-extrabold text-left text-violet-900 mb-2 block;
+    }
+​
+    .error {
+        @apply py-4 pl-3 mb-2 drop-shadow-md rounded-md bg-red-600 text-red-900 font-bold text-white;
+    }
+​
+    ul {
+        @apply list-outside list-disc;
+    }
+​
+    li {
+        @apply ml-6 mb-2 mt-3 text-base text-slate-600 md:text-lg;
+    }
+}
+​
+@layer components {
+    .app-content {
+        @apply mx-auto max-w-full md:max-w-full lg:max-w-screen-2xl px-0 sm:px-6 lg:px-8 pt-0;
+    }
+​
+    .main-content {
+        @apply mx-auto max-w-full md:max-w-full lg:max-w-screen-2xl px-4 sm:px-6 lg:px-8 pt-0;
+    }
+​
+    .images-wrapper {
+        @apply grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-3 md:gap-8 mt-2;
+    }
+​
+    .image-container {
+        @apply pt-2 pb-4 border-2 border-slate-200 bg-white rounded-md px-4 rounded-md hover:border-slate-400 transition duration-150 ease-in-out hover:cursor-pointer flex justify-center flex-col pt-4;
+    }
+​
+    .selected {
+        @apply border-amber-500 drop-shadow-md;
+    }
+​
+    .image-label {
+        @apply flex-none py-3 border-4 border-slate-200 rounded-md;
+    }
+​
+    .image-choice {
+        @apply place-self-start;
+    }
+​
+    div.overview {
+        @apply mb-6;
+    }
+​
+    form#gift-of-giving {
+        @apply app-content lg:px-4 pt-6;
+    }
+​
+    #payment-details,
+    #donation-amount {
+        @apply mt-8;
+    }
+​
+    .charity-item h3 {
+        @apply mt-2;
+    }
+​
+    .charity-item p {
+        @apply mb-1 leading-relaxed mb-2 md:text-lg text-slate-700;
+    }
+​
+    .charity-image {
+        @apply text-center p-1 justify-center w-full;
+    }
+​
+    .charity-item {
+        @apply bg-white border-2 drop-shadow-sm border-neutral-100 rounded-md;
+    }
+​
+    #charities-list {
+        @apply mt-4 mb-8 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8;
+    }
+​
+    #key-actions {
+        @apply px-4;
+    }
+​
+    #social-connections {
+        @apply px-4 mt-2 mb-4;
+    }
+​
+    #donate {
+        @apply mt-6 lg:w-2/6 lg:grow sticky top-0;
+    }
+​
+    #donate-wrapper {
+        @apply w-full mt-auto;
+    }
+​
+    #donation-amount-choices {
+        @apply grid grid-cols-3 gap-2 mb-4;
+    }
+​
+    .donate-wrapper {
+        @apply border-2 border-slate-100 rounded-md drop-shadow-md bg-white;
+    }
+​
+    .lead {
+        @apply text-white bg-violet-600 border-2 border-purple-800 rounded-md p-4 pb-6 mb-8;
+    }
+​
+    .lead p {
+        @apply leading-loose text-2xl;
+    }
+​
+    .lead ol {
+        @apply text-2xl list-outside list-decimal ml-6 mt-1;
+    }
+​
+    .copyright {
+        @apply text-center text-slate-600;
+    }
+​
+    .input-error,
+    input[type=tel].input-error,
+    input[type=text].input-error
+    {
+        @apply border-red-500 bg-red-100 hover:border-red-300;
+    }
+​
+    input.donation-amount-other {
+        @apply h-full w-full text-xl pl-12 font-bold p-4 placeholder:hover:text-slate-400 placeholder:text-slate-400 placeholder:font-normal hover:cursor-pointer ease-in-out duration-300 focus:rounded-md rounded-md focus:bg-purple-50;
+    }
+}
